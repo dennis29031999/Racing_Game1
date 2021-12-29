@@ -1,9 +1,9 @@
 package org.example;
 
-public class Car extends org.example.Vehicle {
+public class Car extends AutoVehicle {
 
 
 
     int doorCount;
-    Engine engine;
+
 }
