@@ -1,7 +1,9 @@
 package org.example;
 
 
-public class App 
+import org.example.Mechanic;
+
+public class App
 {
     public static void main( String[] args )
     {
@@ -43,6 +45,10 @@ public class App
         car2.damage=true;
         car2.doorCount=4;
         car2.color="Blue";
+
+        car2.engine= new Engine();
+        car2.engine.capacity=2000;
+
         System.out.println("Properties of car"+ car2.name);
         System.out.println("Max speed is:"+car2.maxSpeed);
         System.out.println("Fuel level is: "+ car2.fuelLevel);
@@ -51,5 +57,14 @@ public class App
         System.out.println("Damaged: "+ car2.damage);
         System.out.println("Door Count: "+ car2.doorCount);
         System.out.println("Color: "+ car2.color);
+
+        double distanceForCar1 = carReference.accelerate(60,1);
+        double distanceForCar2= car2.accelerate(100,1);
+
+        System.out.println("Engine name before repair: " +carReference.engine.manufacturer);
+        Mechanic mechanic= new Mechanic();
+        mechanic.repair(carReference);
+        System.out.println("Engine name After repair: " +carReference.engine.manufacturer);
+
     }
 }
