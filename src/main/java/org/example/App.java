@@ -17,8 +17,12 @@ public class App
         carReference.damage=true;
         carReference.doorCount=1;
         carReference.color="Red";
-
-
+        Engine engine1= new Engine();
+        engine1.manufacturer="Ferrari";
+        engine1.capacity=3000;
+        carReference.engine=engine1;
+        System.out.println("Engine1 capacity: "+ engine1.capacity);
+        System.out.println("Car engine capcaity "+ carReference.engine.capacity);
         System.out.println("Properties of car"+ carReference.name);
         System.out.println("Max speed is:"+carReference.maxSpeed);
         System.out.println("Fuel level is: "+ carReference.fuelLevel);
