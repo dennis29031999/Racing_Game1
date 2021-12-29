@@ -1,4 +1,8 @@
 package org.example;
 
-public class Engine s{
+public class Engine {
+
+    String manufacturer;
+    int capacity;
+
 }
